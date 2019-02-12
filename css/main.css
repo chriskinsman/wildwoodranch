@@ -18,7 +18,7 @@ i {
 }
 button {
     border-radius: 0;
-    background-color: darksalmon;
+    background-color: darkkhaki;
     color: white;
     padding: 10px;
     border: none;
@@ -37,7 +37,7 @@ header h1 {
     margin: 0 0 0 0;
     padding: 20px 0 0 30px;
     font-family: 'Meddon', cursive;
-    color: darksalmon;
+    color: darkkhaki;
 }
 header h2 {
     margin: 0 0 0 0;
@@ -67,7 +67,7 @@ main {
 }
 #intro h1{
     margin: 0 0 0 0;
-    color : darksalmon;
+    color : darkkhaki;
     font-family: 'Meddon', cursive;
 }
 .paragraph {
@@ -94,7 +94,7 @@ footer li {
     list-style: none;
 }
 #footerLeft h3, #footerMid h3, #footerRight h3 {
-    color : darksalmon;
+    color : darkkhaki;
     font-family: 'Meddon', cursive;
 }
 #footerLeft, #footerMid, #footerRight {
