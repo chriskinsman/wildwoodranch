@@ -1,0 +1,18 @@
+{
+  "name": "wildwoodranch",
+  "version": "1.0.0",
+  "description": "Wildwood Ranch Site",
+  "scripts": {
+    "build": "pug {templates/index,templates/about,templates/contact}.pug --out docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/katekinsman/wildwoodranch"
+  },
+  "author": "Kate Kinsman",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}

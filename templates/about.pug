@@ -1,0 +1,52 @@
+doctype html
+html(lang="en")
+    head
+        include genericMeta
+        title Wildwood Ranch: About Us
+
+        <!--iOS Rich Preview Meta Tags-->
+        meta(property="og:title" content="Wildwood Ranch: About Us")
+        meta(property="og:image" content="assets/wildflower-field-min.jpg")
+
+        <!--scripts and stylesheets-->
+        link(href="https://fonts.googleapis.com/css?family=Gaegu|Meddon|Open+Sans" rel="stylesheet")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous")
+        link(rel="stylesheet" href="css/main.css" type="text/css")
+
+    body
+        include navBar
+        main#about
+            section#bio
+                div.paragraph
+                    aside.bioImages
+                        img(src="assets/ranch.jpg" alt="Ranch")
+                    h1 The Ranch
+                    p.
+                        Wildwood Ranch is the culmination of years of dreaming for sister-in-laws Kate and MacKenzie Kinsman.
+                        Located on 20 gorgeous acres in Fall City, WA, Wildwood Ranch offers camps where kids ages 5 to 13 can
+                        run wild and enjoy all that nature has to offer. Kids have the opportunity to learn how to ride and care for horses,
+                        help in our camp garden and learn about where our food comes from, cook on a campfire, enjoy crafts, make
+                        their own homestead snacks, play with all our farm animals, and have the freedom to just plain be themselves.
+                div.paragraph
+                    aside.bioImages
+                        img(src="assets/kate.jpg" alt="Kate")
+                    h1 Kate Kinsman
+                    p.
+                        Kate grew up working at the local summer camp, Shoofly Farm. In no time at all she was managing the horse program there.
+                        Kate graduated college and spent 2 summers as a mountaineering guide for teens and adults in British Columbia,
+                        taking complete beginners on the adventure of a lifetime. As a guide, she realized that the outdoors has an
+                        amazing capacity to teach us about ourselves. Kate went on to become a Web Developer and after a few years
+                        in the tech industry realized that her passion was really in helping people to connect with the natural world.
+                        While she's keeping her day job for now, Kate hopes to work with kids full-time soon.
+                        She's eager to help children temper the messages of a fast-paced, image-conscious society with the messages
+                        that nature has to share with us about imagination, compassion, and self-exploration.
+                div.paragraph
+                    aside.bioImages
+                        img(src="assets/mac.jpg" alt="MacKenzie")
+                    h1 MacKenzie Kinsman
+                    p.
+                        As a wee child, MacKenzie attended the local summer camp, Shoofly Farm. As she grew her jobs on the farm kept growing with her!
+                        Eventually she began helping manage the camp. After college, MacKenzie went on to become a biochemical researcher. Like Kate,
+                        she quickly realized that her passion was elsewhere. MacKenzie brought a bundle of joy into this world June 2018,
+                        and now spends her days with the little man on the ranch.
+        include footer
