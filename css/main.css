@@ -60,7 +60,7 @@ main {
     text-align: center;
 }
 #intro {
-    background-image: url("../assets/wildflower-field.jpg");
+    background-image: url("../assets/wildflower-field-min.jpg");
     background-size: cover;
     height: 500px;
     padding: 70px;
