@@ -58,6 +58,13 @@ html(lang="en")
                     ga('send', 'event', 'btnClick', 'click', 'register', 1,{});
                     window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSfVbxhIjjf2EyOrHaiTWifSd1aGb-1423177VUVflKeR2sQGg/viewform?usp=sf_link';
                 });
+
+                var downloadBtn = document.getElementById('downloadRelease');
+                downloadBtn.addEventListener('click', function (event) {
+                    ga('send', 'event', 'btnClick', 'click', 'downloadRelease', 1, {});
+                    window.open('https://wildwoodranch.co/assets/EditableLiabilityReleaseForm.pdf');
+                });
+
             })
 
 
@@ -79,7 +86,7 @@ html(lang="en")
                     article.registerStep
                         h2 2. Submit Liability Release Form
                         p If you did not submit a liability release for each participant with your registration information, please download and email the release(s) to <a href="mailto:info@wildwoodranch.co">info@wildwoodranch.co</a> at your earliest convenience.
-                        button(type="button" onclick="window.location.href='/assets/EditableLiabilityReleaseForm.pdf'") Download
+                        button#downloadRelease(type="button") Download
                     article.registerStep
                         h2 3. Pay
                         p Please select the payment option for the number of participants you registered.
