@@ -93,16 +93,13 @@ header .social {
 /* MAIN */
 main {
     text-align: center;
-}
-
-#intro, #bio, #contact, #faq {
     background-image: url("../assets/wildflower-field-min.jpg");
     background-size: cover;
     min-height: 500px;
     padding: 70px;
 }
 
-#intro h1, #bio h1, #contact h1, #faq h1{
+main h1{
     margin: 0 0 0 0;
     color : darkkhaki;
     font-family: 'Meddon', cursive;
@@ -185,6 +182,40 @@ footer .social {
 
 #faq .question{
     text-align: left;
+}
+
+/* REGISTER PAGE */
+
+.registerStep {
+     margin-bottom: 20px;
+     text-align: left;
+ }
+
+.registerStep p {
+    margin-left: 25px;
+}
+
+.registerStep button {
+    margin-left: 25px;
+}
+
+#register ul {
+    margin: auto;
+    padding-left: 0;
+}
+
+#register li {
+    list-style: none;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+#numParticipants {
+    height: 35px;
+}
+
+#participantLabel {
+    padding-left: 5px;
 }
 
 @media (max-width: 1090px) {

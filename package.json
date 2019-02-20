@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Wildwood Ranch Site",
   "scripts": {
-    "build": "pug {templates/index,templates/about,templates/contact,templates/faq}.pug --out docs"
+    "build": "pug {templates/index,templates/about,templates/contact,templates/faq,templates/register,templates/success,templates/error}.pug --out docs"
   },
   "repository": {
     "type": "git",
