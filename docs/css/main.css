@@ -218,6 +218,11 @@ footer .social {
     padding-left: 5px;
 }
 
+/* PHOTOS PAGE */
+.photos {
+    margin-top: 10px;
+}
+
 @media (max-width: 1090px) {
     header .social {
         display: none;
