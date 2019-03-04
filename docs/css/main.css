@@ -206,7 +206,7 @@ footer .social {
 
 #register li {
     list-style: none;
-    display: inline-block;
+    /* display: inline-block; */
     margin-bottom: 20px;
 }
 
