@@ -71,31 +71,38 @@ html(lang="en")
 
     body
         include navBar
-        main#register
+        main#register.container
             section#steps
-                div.paragraph
-                    h1 Register
-                    p We'd love to have you out to the Ranch! Each session is open to kids ages 5-13 and is $495 per participant.
-                    p The following sessions are now open for registration:
-                    h3 Spring Break Camp
-                    ul
-                        li Spring Break Camp: April 8 - 12, 2019
-                    h3 Summer Camp
-                    ul
-                        li July 8 - 12, 2019
-                        li July 15 - 19, 2019
-                        li July 22 - 26, 2019
-                        li July 29 - August 2, 2019
-                    article.registerStep
-                        h2 1. Register
+                div.row
+                    div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2
+                        h1 Register
+                        p We'd love to have you out to the Ranch!
+                        p Each session is open to kids ages 5-13 and is $495 per participant.
+                        p The following sessions are now open for registration:
+                    div.col-12.col-md-4.offset-md-2.col-lg-3.offset-lg-3
+                        h3 Spring Break Camp
+                        ul
+                            li Spring Break Camp: April 8 - 12, 2019
+                    div.col-12.col-md-4.col-lg-3
+                        h3 Summer Camp
+                        ul
+                            li July 8 - 12, 2019
+                            li July 15 - 19, 2019
+                            li July 22 - 26, 2019
+                            li July 29 - August 2, 2019
+                article.registerStep.row
+                    div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2
+                        h2 <span class="punctuation">1.</span> Register
                         p Submit your registration information via the form linked below. You may select multiple sessions via this form. If you have already registered for one of our sessions, feel free to email us to add another session rather than filling out the form a second time.
                         button#registerBtn(type="button") Register
-                    article.registerStep
-                        h2 2. Submit Liability Release Form
+                article.registerStep.row
+                    div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2
+                        h2 <span class="punctuation">2.</span> Submit Liability Release Form
                         p Please download and email a liability release for each participant you registered to <a href="mailto:info@wildwoodranch.co">info@wildwoodranch.co</a> at your earliest convenience.
                         button#downloadRelease(type="button") Download
-                    article.registerStep
-                        h2 3. Pay
+                article.registerStep.row
+                    div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2
+                        h2 <span class="punctuation">3.</span> Pay
                         p Please select the payment option for the number of participants you registered. Each session is $495 per participant. If you registered participants for multiple sessions, please multiply the number of sessions by the number of participants. For instance, select 4 if you registered 2 participants for 2 sessions each.
                         p
                             select#numParticipants
@@ -113,6 +120,5 @@ html(lang="en")
                             button#checkout.checkout Pay
                         p If we do not receive payment in full within 3 days of your registration submittal, you will be notified of your registration cancellation.
                         p#error-message
-
 
         include footer
