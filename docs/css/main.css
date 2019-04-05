@@ -15,9 +15,10 @@
 /* GENERAL */
 body {
     font-family: 'Open Sans', sans-serif;
-    margin: 0 0 0 0;
     box-sizing: border-box;
-    color: #505050;
+    color: black;
+    letter-spacing: .07em;
+    line-height: 1.5em;
 }
 
 a, a:visited {
@@ -91,8 +92,8 @@ nav a, nav a:active {
 }
 
 .subheader{
-    background-color: darkkhaki;
-    padding: 3px;
+    background-color: white;
+    display: none;
 }
 .subheader .social:last-child {
     margin-right: 15px;
@@ -101,14 +102,13 @@ nav a, nav a:active {
 /* MAIN */
 main {
     text-align: center;
-    min-height: 500px;
     padding-top: 20px;
     padding-bottom: 40px;
 }
 
 main h1{
-    margin: 0 0 0 0;
-    color : darkkhaki;
+    margin: 10px 0 10px 0;
+    color: darkkhaki;
     font-family: 'ahoy_amigo_demoregular', cursive;
     font-size: 60px;
 }
@@ -137,11 +137,23 @@ main h2 .punctuation {
     color : black;
 }
 
+body {
+    background-image: url("../assets/wildflower-field-faded.jpg");
+    /*margin-bottom: 30px;*/
+    background-size: cover;
+}
+
+#home, #register, #faq, #contact, #about, #success, #error {
+    background-color: rgba(255,255,255,.7);
+    padding: 20px 0 50px 0;
+    margin-bottom: 50px;
+}
+
 /* FOOTER */
 footer {
     min-height: 150px;
     padding: 0 0 0 0;
-    background: darkkhaki;
+    background: white;
 }
 
 footer a, footer a:visited {
@@ -179,25 +191,35 @@ footer .social a{
 /* ABOUT PAGE */
 
 #about .bioImages img{
-    max-width: 300px;
-    max-height: 300px;
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 600px;
+    max-height: 600px;
+    width: 100%;
 }
 
 #about .bio {
-    margin-bottom: 40px;
+    margin-bottom: 100px;
+    /* margin-top: 40px; */
 }
 
 #about h1 {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 /* FAQ PAGE */
 
 #faq .question{
     text-align: left;
+    margin: 10px 0 30px 0;
 }
 
 /* REGISTER PAGE */
+
+#campInfo {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
 
 .registerStep {
     margin-top: 40px;
