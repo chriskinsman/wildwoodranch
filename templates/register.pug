@@ -17,12 +17,10 @@ html(lang="en")
 
         <!-- Create a button that your customers click to complete their purchase. -->
         script.
-            var stripe = Stripe('pk_live_0EsoHJLVA2b3hIwKiCQ1zVjU', {
-                betas: ['checkout_beta_4']
-            });
+            var stripe = Stripe('pk_live_0EsoHJLVA2b3hIwKiCQ1zVjU');
 
             var checkoutObj = {
-                items: [{sku: 'sku_EZ9S12lHJfuG2d', quantity: 1}],
+                items: [{sku: 'sku_FF6lghCaAWtf9i', quantity: 1}],
 
                 // Note that it is not guaranteed your customers will be redirected to this
                 // URL *100%* of the time, it's possible that they could e.g. close the
@@ -56,7 +54,7 @@ html(lang="en")
                 var registerBtn = document.getElementById('registerBtn');
                 registerBtn.addEventListener('click', function (event) {
                     ga('send', 'event', 'btnClick', 'click', 'register', 1,{});
-                    window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSfVbxhIjjf2EyOrHaiTWifSd1aGb-1423177VUVflKeR2sQGg/viewform?usp=sf_link';
+                    window.open('https://docs.google.com/forms/d/e/1FAIpQLSfVbxhIjjf2EyOrHaiTWifSd1aGb-1423177VUVflKeR2sQGg/viewform?usp=sf_link');
                 });
 
                 var downloadBtn = document.getElementById('downloadRelease');

@@ -2,12 +2,10 @@
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'UA-47480557-2');
-</script><!-- Bootstrap CDN --><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><title>Wildwood Ranch: Register</title><!--iOS Rich Preview Meta Tags--><meta property="og:title" content="Wildwood Ranch: Register"><meta property="og:image" content="assets/wildflower-field-min.jpg"><!--scripts and stylesheets--><link href="https://fonts.googleapis.com/css?family=Gaegu|Meddon|Open+Sans" rel="stylesheet"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"><link rel="stylesheet" href="css/main.css" type="text/css"><script src="https://js.stripe.com/v3"></script><!-- Create a button that your customers click to complete their purchase. --><script>var stripe = Stripe('pk_live_0EsoHJLVA2b3hIwKiCQ1zVjU', {
-    betas: ['checkout_beta_4']
-});
+</script><!-- Bootstrap CDN --><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><title>Wildwood Ranch: Register</title><!--iOS Rich Preview Meta Tags--><meta property="og:title" content="Wildwood Ranch: Register"><meta property="og:image" content="assets/wildflower-field-min.jpg"><!--scripts and stylesheets--><link href="https://fonts.googleapis.com/css?family=Gaegu|Meddon|Open+Sans" rel="stylesheet"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"><link rel="stylesheet" href="css/main.css" type="text/css"><script src="https://js.stripe.com/v3"></script><!-- Create a button that your customers click to complete their purchase. --><script>var stripe = Stripe('pk_live_0EsoHJLVA2b3hIwKiCQ1zVjU');
 
 var checkoutObj = {
-    items: [{sku: 'sku_EZ9S12lHJfuG2d', quantity: 1}],
+    items: [{sku: 'sku_FF6lghCaAWtf9i', quantity: 1}],
 
     // Note that it is not guaranteed your customers will be redirected to this
     // URL *100%* of the time, it's possible that they could e.g. close the
@@ -41,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var registerBtn = document.getElementById('registerBtn');
     registerBtn.addEventListener('click', function (event) {
         ga('send', 'event', 'btnClick', 'click', 'register', 1,{});
-        window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSfVbxhIjjf2EyOrHaiTWifSd1aGb-1423177VUVflKeR2sQGg/viewform?usp=sf_link';
+        window.open('https://docs.google.com/forms/d/e/1FAIpQLSfVbxhIjjf2EyOrHaiTWifSd1aGb-1423177VUVflKeR2sQGg/viewform?usp=sf_link');
     });
 
     var downloadBtn = document.getElementById('downloadRelease');
