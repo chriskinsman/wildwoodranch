@@ -20,7 +20,7 @@ html(lang="en")
             var stripe = Stripe('pk_live_0EsoHJLVA2b3hIwKiCQ1zVjU');
 
             var checkoutObj = {
-                items: [{sku: 'sku_FF6lghCaAWtf9i', quantity: 1}],
+                items: [{sku: 'sku_GNZWJpP1UdOyrc', quantity: 1}],
 
                 // Note that it is not guaranteed your customers will be redirected to this
                 // URL *100%* of the time, it's possible that they could e.g. close the
@@ -54,7 +54,7 @@ html(lang="en")
                 var registerBtn = document.getElementById('registerBtn');
                 registerBtn.addEventListener('click', function (event) {
                     ga('send', 'event', 'btnClick', 'click', 'register', 1,{});
-                    window.open('https://docs.google.com/forms/d/e/1FAIpQLSfVbxhIjjf2EyOrHaiTWifSd1aGb-1423177VUVflKeR2sQGg/viewform?usp=sf_link');
+                    window.open('https://forms.gle/uCVV5cdvQhDGwXFH8');
                 });
 
                 var downloadBtn = document.getElementById('downloadRelease');
@@ -87,27 +87,27 @@ html(lang="en")
                     //        li April 6 - 10
                     //        li April 13 - 17
                     // DOUBLE COL
-                    //div.col-12.col-md-4.offset-md-2.col-lg-3.offset-lg-3
-                    //    h3 <span class="punctuation">2020</span> Spring Break Camp
-                    //    ul
-                    //        li April 6 - 10
-                    //        li April 13 - 17
+                    div.col-12.col-md-4.offset-md-2.col-lg-4.offset-lg-2
+                        h3 <span class="punctuation">2020</span> Spring Break Camp
+                        ul
+                            li April 6 - 10
+                            li April 13 - 17
                     // DOUBLE COL
-                    //div.col-12.col-md-4.col-lg-3
-                    //    h3 <span class="punctuation">2020</span> Summer Camp
-                    //    ul
-                    //        li June 8 - 12
-                    //        li June 15 - 19
-                    //        li June 22 - 26
-                    //        li June 29 - August 3
-                    //        li July 6 - 10
-                    //        li July 13 - 17
-                    //        li July 20 - 24
-                    //        li July 27 - 31
-                    //        li August 3 - 7
-                    //        li August 10 - 14
-                    //        li August 17 - 21
-                    //        li August 24 - 28
+                    div.col-12.col-md-4.col-lg-4
+                        h3 <span class="punctuation">2020</span> Summer Camp
+                        ul
+                            li June 8 - 12
+                            li June 15 - 19
+                            li June 22 - 26
+                            li June 29 - July 3
+                            li July 6 - 10
+                            li July 13 - 17
+                            li July 20 - 24
+                            li July 27 - 31
+                            li August 3 - 7
+                            li August 10 - 14
+                            li August 17 - 21
+                            li August 24 - 28
                     // SINGLE COL
                     //div.col-12.col-md-4.offset-md-4.col-lg-4.offset-lg-4
                     //    h3 <span class="punctuation">2020</span> Summer Camp
@@ -115,7 +115,7 @@ html(lang="en")
                     //        li June 8 - 12
                     //        li June 15 - 19
                     //        li June 22 - 26
-                    //        li June 29 - August 3
+                    //        li June 29 - July 3
                     //        li July 6 - 10
                     //        li July 13 - 17
                     //        li July 20 - 24
@@ -124,35 +124,35 @@ html(lang="en")
                     //        li August 10 - 14
                     //        li August 17 - 21
                     //        li August 24 - 28
-                //article.registerStep.row
-                //    div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2
-                //        h2 <span class="punctuation">1.</span> Register
-                //        p Submit your registration information via the form linked below. You may select multiple sessions via this form. If you have already registered for one of our sessions, feel free to email us to add another session rather than filling out the form a second time.
-                //        button#registerBtn(type="button") Register
-                //article.registerStep.row
-                //    div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2
-                //        h2 <span class="punctuation">2.</span> Submit Liability Release Form
-                //        p Please download and email a liability release for each participant you registered to <a href="mailto:info@wildwoodranch.co">info@wildwoodranch.co</a> at your earliest convenience.
-                //        button#downloadRelease(type="button") Download
-                //article.registerStep.row
-                //    div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2
-                //        h2 <span class="punctuation">3.</span> Pay
-                //        p Please select the payment option for the number of participants you registered. Each session is $495 per participant. If you registered participants for multiple sessions, please multiply the number of sessions by the number of participants. For instance, select 4 if you registered 2 participants for 2 sessions each.
-                //        p
-                //            select#numParticipants
-                //                option(value=1 name="1") 1
-                //                option(value=2 name="2") 2
-                //                option(value=3 name="3") 3
-                //                option(value=4 name="4") 4
-                //                option(value=5 name="5") 5
-                //                option(value=6 name="6") 6
-                //                option(value=7 name="7") 7
-                //                option(value=8 name="8") 8
-                //                option(value=9 name="9") 9
-                //                option(value=10 name="10") 10
-                //            span#participantLabel Participant
-                //            button#checkout.checkout Pay
-                //        p If we do not receive payment in full within 3 days of your registration submittal, you will be notified of your registration cancellation.
-                //        p#error-message
+                article.registerStep.row
+                    div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2
+                        h2 <span class="punctuation">1.</span> Register
+                        p Submit your registration information via the form linked below. You may select multiple sessions via this form. If you have already registered for one of our sessions, feel free to email us to add another session rather than filling out the form a second time.
+                        button#registerBtn(type="button") Register
+                article.registerStep.row
+                    div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2
+                        h2 <span class="punctuation">2.</span> Submit Liability Release Form
+                        p Please download and email a liability release for each participant you registered to <a href="mailto:info@wildwoodranch.co">info@wildwoodranch.co</a> at your earliest convenience.
+                        button#downloadRelease(type="button") Download
+                article.registerStep.row
+                    div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2
+                        h2 <span class="punctuation">3.</span> Pay
+                        p Please select the payment option for the number of participants you registered. Each session is $495 per participant. If you registered participants for multiple sessions, please multiply the number of sessions by the number of participants. For instance, select 4 if you registered 2 participants for 2 sessions each.
+                        p
+                            select#numParticipants
+                                option(value=1 name="1") 1
+                                option(value=2 name="2") 2
+                                option(value=3 name="3") 3
+                                option(value=4 name="4") 4
+                                option(value=5 name="5") 5
+                                option(value=6 name="6") 6
+                                option(value=7 name="7") 7
+                                option(value=8 name="8") 8
+                                option(value=9 name="9") 9
+                                option(value=10 name="10") 10
+                            span#participantLabel Participant
+                            button#checkout.checkout Pay
+                        p If we do not receive payment in full within 3 days of your registration submittal, you will be notified of your registration cancellation.
+                        p#error-message
 
         include footer
