@@ -1,0 +1,293 @@
+/*font-family: 'Open Sans', sans-serif;*/
+/*font-family: 'Gaegu', cursive;*/
+/*font-family: 'Meddon', cursive;*/
+
+@font-face {
+    font-family: 'ahoy_amigo_demoregular';
+    src: url('../fonts/ahoyamigo-demo-webfont.woff2') format('woff2'),
+    url('../fonts/ahoyamigo-demo-webfont.woff') format('woff'),
+    url('../fonts/AhoyAmigo-DEMO.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* GENERAL */
+body {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    color: black;
+    letter-spacing: .07em;
+    line-height: 1.5em;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: darkkhaki;
+    text-align: center;
+}
+
+a:hover, a:active {
+    text-decoration: none;
+    color: #505050;
+}
+
+i {
+    color: black;
+}
+
+i:hover {
+    color: #505050;
+}
+
+button {
+    border-radius: 0;
+    background-color: darkkhaki;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+    min-width: 100px;
+}
+
+address {
+    font-style: normal;
+}
+
+/* HEADER */
+
+nav h2 {
+    font-size: 40px;
+}
+
+nav h1 {
+    margin: 0 0 0 0;
+    padding: 20px 0 0 30px;
+    font-family: 'ahoy_amigo_demoregular', cursive;
+    color: darkkhaki;
+}
+
+nav h3, nav h2 {
+    margin: 0 0 0 0;
+    font-family: 'ahoy_amigo_demoregular', cursive;
+}
+
+#title img{
+    width: 100%;
+}
+
+nav {
+    padding: 30px;
+    font-family: 'ahoy_amigo_demoregular', cursive;
+}
+
+nav a:hover, nav a:visited {
+    color: #505050;
+    text-align: center;
+}
+
+nav a, nav a:active {
+    color: black;
+    text-align: center;
+}
+
+.subheader{
+    background-color: white;
+    display: none;
+}
+.subheader .social:last-child {
+    margin-right: 15px;
+}
+
+/* MAIN */
+main {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+main h1{
+    margin: 10px 0 10px 0;
+    color: darkkhaki;
+    font-family: 'ahoy_amigo_demoregular', cursive;
+    font-size: 60px;
+}
+
+main h2 {
+    font-family: 'ahoy_amigo_demoregular', 'Open Sans', sans-serif;
+    font-size: 50px;
+    color : black;
+}
+
+main h3{
+    color : black;
+    font-family: 'ahoy_amigo_demoregular', 'Open Sans', sans-serif;
+    font-size: 40px;
+}
+
+main h3 .punctuation {
+    color : black;
+    font-size: 30px;
+    letter-spacing: -5px;
+}
+
+main h2 .punctuation {
+    font-size: 40px;
+    color : black;
+    letter-spacing: -5px;
+}
+
+main h1 .punctuation {
+    font-size: 40px;
+    letter-spacing: -5px;
+}
+
+.punctuation {
+    font-family: 'Gaegu', 'Open Sans', sans-serif;
+}
+
+nav .punctuation {
+    font-size: 30px;
+    letter-spacing: -5px;
+}
+
+body {
+    background-image: url("../assets/wildflower-field-faded-min.jpg");
+    /*margin-bottom: 30px;*/
+    background-size: cover;
+}
+
+#home, #register, #faq, #contact, #about, #success, #error, #jobs, #covid {
+    background-color: rgba(255,255,255,.7);
+    padding: 20px 0 50px 0;
+    margin-bottom: 50px;
+}
+
+/* FOOTER */
+footer {
+    min-height: 150px;
+    padding: 0 0 0 0;
+    background: white;
+}
+
+footer a, footer a:visited {
+    color: black;
+}
+
+footer a:hover, footer a:active {
+    color: #505050;
+}
+
+footer ul {
+    padding-left: 0;
+}
+
+footer li {
+    list-style: none;
+    padding: 5px;
+}
+
+#footerLeft h3, #footerMid h3, #footerRight h3 {
+    color : black;
+    font-family: 'ahoy_amigo_demoregular', cursive;
+    font-size: 40px;
+}
+
+#footerLeft, #footerMid, #footerRight {
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social a{
+    margin: 10px;
+}
+
+/* ABOUT PAGE */
+
+#about .bioImages img{
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 600px;
+    max-height: 600px;
+    width: 100%;
+}
+
+#about .bio {
+    margin-bottom: 100px;
+    /* margin-top: 40px; */
+}
+
+#about h1 {
+    margin-bottom: 40px;
+}
+
+/* FAQ PAGE */
+
+#faq .question{
+    text-align: left;
+    margin: 10px 0 30px 0;
+}
+
+/* REGISTER PAGE */
+
+#campInfo {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.registerStep {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.registerStep p {
+    margin-left: 25px;
+}
+
+.registerStep button {
+    margin-left: 25px;
+}
+
+#register ul, #jobs ul {
+    margin: auto;
+    padding-left: 0;
+}
+
+#register li, #jobs li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+#numParticipants {
+    height: 35px;
+    border: 1px solid black;
+}
+
+#participantLabel {
+    padding-left: 5px;
+}
+
+/* CONTACT PAGE */
+
+#contact .title {
+    margin-bottom: 40px;
+}
+
+#contact .map {
+    margin-top: 40px;
+}
+
+/* JOBS PAGE */
+
+#newEmployeeApplyBtn, #oldEmployeeApplyBtn {
+    margin: 10px;
+}
+
+#jobs ul {
+    margin-bottom: 20px;
+}
+
+#jobs li {
+    margin-bottom: 10px;
+}
