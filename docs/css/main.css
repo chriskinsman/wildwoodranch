@@ -259,6 +259,10 @@ footer .social a{
     margin-bottom: 20px;
 }
 
+.closed {
+    text-decoration: line-through;
+}
+
 #numParticipants {
     height: 35px;
     border: 1px solid black;
