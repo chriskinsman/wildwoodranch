@@ -249,6 +249,10 @@ footer .social a{
     margin-left: 25px;
 }
 
+button {
+    cursor: pointer;
+}
+
 #register ul, #jobs ul {
     margin: auto;
     padding-left: 0;
