@@ -14,65 +14,6 @@ html(lang="en")
         link(rel="stylesheet" href="css/main.css" type="text/css")
         script(src="https://js.stripe.com/v3")
 
-
-        <!-- Create a button that your customers click to complete their purchase. -->
-        script.
-            var stripe = Stripe('pk_live_0EsoHJLVA2b3hIwKiCQ1zVjU');
-
-            var checkoutObj = {
-                items: [{sku: 'sku_GNZWJpP1UdOyrc', quantity: 1}],
-
-                // Note that it is not guaranteed your customers will be redirected to this
-                // URL *100%* of the time, it's possible that they could e.g. close the
-                // tab between form submission and the redirect.
-                successUrl: window.location.protocol + '//wildwoodranch.co/success',
-                cancelUrl: window.location.protocol + '//wildwoodranch.co/error'
-            }
-
-            var errorFn = function (result) {
-                if (result.error) {
-                    // If `redirectToCheckout` fails due to a browser or network
-                    // error, display the localized error message to your customer.
-                    var displayError = document.getElementById('error-message');
-                    displayError.textContent = result.error.message;
-                }
-            };
-
-            document.addEventListener("DOMContentLoaded", function () {
-                // var checkoutBtn = document.getElementById('checkout');
-                //
-                // checkoutBtn.addEventListener('click', function (event) {
-                //     // Change quantity
-                //     var numParticipants = document.getElementById('numParticipants');
-                //     ga('send', 'event', 'btnClick', 'click', 'payOnline', numParticipants, {});
-                //     checkoutObj.items[0].quantity = parseInt(numParticipants.options[numParticipants.selectedIndex].value);
-                //     // When the customer clicks on the button, redirect them to Checkout.
-                //     stripe.redirectToCheckout(checkoutObj)
-                //         .then(errorFn);
-                // });
-
-                var registerBtn = document.getElementById('registerBtn');
-                registerBtn.addEventListener('click', function (event) {
-                    ga('send', 'event', 'btnClick', 'click', 'registerPast', 1,{});
-                    window.open('https://forms.gle/pCH11Sg6FyJyrG1PA');
-                });
-
-              var registerNewBtn = document.getElementById('registerNewBtn');
-              registerNewBtn.addEventListener('click', function (event) {
-                ga('send', 'event', 'btnClick', 'click', 'registerNew', 1, {});
-                window.open('https://forms.gle/Leo8RqoC7gJe4xqp9');
-              });
-
-                // var downloadBtn = document.getElementById('downloadRelease');
-                // downloadBtn.addEventListener('click', function (event) {
-                //     ga('send', 'event', 'btnClick', 'click', 'downloadRelease', 1, {});
-                //     window.open('https://wildwoodranch.co/assets/EditableLiabilityReleaseForm.pdf');
-                // });
-
-            })
-
-
-
     body
         include navBar
         main#register.container
@@ -81,7 +22,9 @@ html(lang="en")
                     div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2
                         h1 Register
                         p We'd love to have you out to the Ranch!
-                        p Check back after January 15th to register for 2021 camps.
+                        button#registerNowBtn(type="button" onclick="window.open('http://www.ultracamp.com/info/upcomingsessions.aspx?idCamp=1075&campCode=WWR', '_blank')") Upcoming Sessions
+                    div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2
+                        p &nbsp;
                         //- p.
                         //-     Summer is over and school has started, but don't let the fun stop now! We are running camp
                         //-     after school on Tuesdays and Wednesdays starting the last week in September and continuing
