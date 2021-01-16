@@ -1,7 +1,7 @@
 doctype html
 html(lang="en")
     head
-        include genericMeta
+        include includes/genericMeta
         title Wildwood Ranch: Register
 
         <!--iOS Rich Preview Meta Tags-->
@@ -15,7 +15,7 @@ html(lang="en")
         script(src="https://js.stripe.com/v3")
 
     body
-        include navBar
+        include includes/navBar
         main#register.container
             section#steps
                 div.row
@@ -160,5 +160,5 @@ html(lang="en")
                             Our standard cancellation policy offers a full refund for any reason for up to a week before your registered session. After that date, we offer credit toward a future session of camp.
                             Please see our <a href="covid.html">COVID<span class="punctuation">-19</span></a> page for our revised policy during the COVID<span class="punctuation">-19</span> pandemic.
 
-        include footer
+        include includes/footer
             //bump
