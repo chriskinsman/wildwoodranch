@@ -14,65 +14,6 @@ html(lang="en")
         link(rel="stylesheet" href="css/main.css" type="text/css")
         script(src="https://js.stripe.com/v3")
 
-
-        <!-- Create a button that your customers click to complete their purchase. -->
-        script.
-            var stripe = Stripe('pk_live_0EsoHJLVA2b3hIwKiCQ1zVjU');
-
-            var checkoutObj = {
-                items: [{sku: 'sku_GNZWJpP1UdOyrc', quantity: 1}],
-
-                // Note that it is not guaranteed your customers will be redirected to this
-                // URL *100%* of the time, it's possible that they could e.g. close the
-                // tab between form submission and the redirect.
-                successUrl: window.location.protocol + '//wildwoodranch.co/success',
-                cancelUrl: window.location.protocol + '//wildwoodranch.co/error'
-            }
-
-            var errorFn = function (result) {
-                if (result.error) {
-                    // If `redirectToCheckout` fails due to a browser or network
-                    // error, display the localized error message to your customer.
-                    var displayError = document.getElementById('error-message');
-                    displayError.textContent = result.error.message;
-                }
-            };
-
-            document.addEventListener("DOMContentLoaded", function () {
-                // var checkoutBtn = document.getElementById('checkout');
-                //
-                // checkoutBtn.addEventListener('click', function (event) {
-                //     // Change quantity
-                //     var numParticipants = document.getElementById('numParticipants');
-                //     ga('send', 'event', 'btnClick', 'click', 'payOnline', numParticipants, {});
-                //     checkoutObj.items[0].quantity = parseInt(numParticipants.options[numParticipants.selectedIndex].value);
-                //     // When the customer clicks on the button, redirect them to Checkout.
-                //     stripe.redirectToCheckout(checkoutObj)
-                //         .then(errorFn);
-                // });
-
-                var registerBtn = document.getElementById('registerBtn');
-                registerBtn.addEventListener('click', function (event) {
-                    ga('send', 'event', 'btnClick', 'click', 'registerPast', 1,{});
-                    window.open('https://forms.gle/pCH11Sg6FyJyrG1PA');
-                });
-
-              var registerNewBtn = document.getElementById('registerNewBtn');
-              registerNewBtn.addEventListener('click', function (event) {
-                ga('send', 'event', 'btnClick', 'click', 'registerNew', 1, {});
-                window.open('https://forms.gle/Leo8RqoC7gJe4xqp9');
-              });
-
-                // var downloadBtn = document.getElementById('downloadRelease');
-                // downloadBtn.addEventListener('click', function (event) {
-                //     ga('send', 'event', 'btnClick', 'click', 'downloadRelease', 1, {});
-                //     window.open('https://wildwoodranch.co/assets/EditableLiabilityReleaseForm.pdf');
-                // });
-
-            })
-
-
-
     body
         include navBar
         main#register.container
@@ -81,23 +22,39 @@ html(lang="en")
                     div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2
                         h1 Register
                         p We'd love to have you out to the Ranch!
+                        button#registerNowBtn(type="button" onclick="window.open('http://www.ultracamp.com/info/upcomingsessions.aspx?idCamp=1075&campCode=WWR', '_blank')") Upcoming Sessions
+                        p
                         p.
-                            Summer is over and school has started, but don't let the fun stop now! We are running camp
-                            after school on Tuesdays and Wednesdays starting the last week in September and continuing
-                            through November. Registration is per day, pick and choose the days that work best for your
-                            family.
-                        //div#campInfo.row.justify-content-center
-                        //    p.col-12.col-sm-10.col-md-3 M-F 9am - 3pm
-                        //    p.col-12.col-sm-10.col-md-3 Ages 5-13
-                        //    p.col-12.col-sm-10.col-md-3 $495 per participant
-                        div#campInfo.row.justify-content-center
-                            p.col-12.col-sm-10.col-md-3 Tuesdays<br> 3:30pm - 6:30pm
-                            p.col-12.col-sm-10.col-md-3 Wednesdays<br>  2pm - 5pm
-                            p.col-12.col-sm-10.col-md-3 Ages 5-13
-                            p.col-12.col-sm-10.col-md-3 $60 per participant
+                            We are excited to introduce our new registration platform, our hope is that this will allow us 
+                            to spend more time on the camper experience and less time in the office! Follow these 
+                            instructions to make your account for the first time.
+                        p 1. Click on “New User” and use the information for your primary contact to create an account.
+                        p 2. Click on “add person” and enter the details for the secondary adult on the account if needed, a second parent or nanny for example. You can choose to have this contact be CC'ed on all correspondence if wanted. At the bottom, select to have them be designated as a secondary contact for the account.
+                        p 3. Click on the “add person” link to make profiles for each of your campers.
+                        p 4. To register a camper click on the “register” button on the right hand side of the screen. 
+                        p If you run into any problems along the way do not hesitate to call or email MacKenzie for help at (425)260-5024 or info@wildwoodranch.co.
+                        button#LoginBtn(type="button" onclick="window.open('http://www.ultracamp.com/clientlogin.aspx?idCamp=1075&campCode=WWR', '_blank')") Log In
+
+
+                    div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2
+                        p &nbsp;
+                        //- p.
+                        //-     Summer is over and school has started, but don't let the fun stop now! We are running camp
+                        //-     after school on Tuesdays and Wednesdays starting the last week in September and continuing
+                        //-     through November. Registration is per day, pick and choose the days that work best for your
+                        //-     family.
+                        //- //div#campInfo.row.justify-content-center
+                        //- //    p.col-12.col-sm-10.col-md-3 M-F 9am - 3pm
+                        //- //    p.col-12.col-sm-10.col-md-3 Ages 5-13
+                        //- //    p.col-12.col-sm-10.col-md-3 $495 per participant
+                        //- div#campInfo.row.justify-content-center
+                        //-     p.col-12.col-sm-10.col-md-3 Tuesdays<br> 3:30pm - 6:30pm
+                        //-     p.col-12.col-sm-10.col-md-3 Wednesdays<br>  2pm - 5pm
+                        //-     p.col-12.col-sm-10.col-md-3 Ages 5-13
+                        //-     p.col-12.col-sm-10.col-md-3 $60 per participant 
                     div.col-12.col-md-10.offset-md-1
                         h3 COVID<span class="punctuation">-19</span> Update
-                        p At this time, we plan to run our 2020 fall camps. Please see our <a href="covid.html">COVID<span class="punctuation">-19</span></a> page for further details.
+                        p At this time, we plan to run our 2021 spring and summer camps. Please see our <a href="covid.html">COVID<span class="punctuation">-19</span></a> page for further details.
                         p We understand that finances at this time can be uncertain or strained. If your family has been financially affected by COVID<span class="punctuation">-19</span>, please let us know and we can work out a plan for payment together.
                     // SINGLE COL
                     //div.col-12.col-md-4.offset-md-4.col-lg-4.offset-lg-4
@@ -126,30 +83,30 @@ html(lang="en")
                     //        li August 17 - 21
                     //        li August 24 - 28
                     // DOUBLE COL SPRING/SUMMER
-                    div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2
-                        h3.row.justify-content-center Fall Camp
-                    div.col-12.col-md-4.offset-md-2.col-lg-4.offset-lg-2
-                        ul
-                            li T, September 29
-                            li W, September 30
-                            li T, October 13
-                            li W, October 14
-                            li T, October 20
-                            li W, October 21
-                            li T, October 27
-                            li W, October 28
-                    div.col-12.col-md-4.col-lg-4
-                        ul
-                            li T, November 3
-                            li W, November 4
-                            li T, November 10
-                            li W, November 11 (full-day)
-                            li T, November 17
-                            li W, November 18
-                            li T, November 24
-                            li W, November 25
-                    div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2
-                        p <span class="punctuation">*</span>Veterans Day camp November 11th<span class="punctuation">*</span> <br> No school, no problem! Join our full day camp 9am-3pm, $120 per camper.
+                    //- div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2
+                    //-     h3.row.justify-content-center Fall Camp
+                    //- div.col-12.col-md-4.offset-md-2.col-lg-4.offset-lg-2
+                    //-     ul
+                    //-         li T, September 29
+                    //-         li W, September 30
+                    //-         li T, October 13
+                    //-         li W, October 14
+                    //-         li T, October 20
+                    //-         li W, October 21
+                    //-         li T, October 27
+                    //-         li W, October 28
+                    //- div.col-12.col-md-4.col-lg-4
+                    //-     ul
+                    //-         li T, November 3
+                    //-         li W, November 4
+                    //-         li T, November 10
+                    //-         li W, November 11 (full-day)
+                    //-         li T, November 17
+                    //-         li W, November 18
+                    //-         li T, November 24
+                    //-         li W, November 25
+                    //- div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2
+                    //-     p <span class="punctuation">*</span>Veterans Day camp November 11th<span class="punctuation">*</span> <br> No school, no problem! Join our full day camp 9am-3pm, $120 per camper.
                     // SINGLE COL
                     //div.col-12.col-md-4.offset-md-4.col-lg-4.offset-lg-4
                     //    h3 <span class="punctuation">2020</span> Summer Camp
@@ -164,38 +121,38 @@ html(lang="en")
                     //        li August 10 - 14
                     //        li August 17 - 21
                     //        li August 24 - 28
-                article.registerStep.row
-                    div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2
-                        h2 <span class="punctuation">1.</span> Register
-                        p Please submit your registration via the past participant registration if your child(ren) have been to any of our 2020 camps. Otherwise, please use the new participant registration.
-                        button#registerBtn(type="button") Past Participant Registration
-                        button#registerNewBtn(type="button") New Participant Registration
+                //- article.registerStep.row
+                //-     div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2
+                //-         h2 <span class="punctuation">1.</span> Register
+                //-         p Please submit your registration via the past participant registration if your child(ren) have been to any of our 2020 camps. Otherwise, please use the new participant registration.
+                //-         button#registerBtn(type="button") Past Participant Registration
+                //-         button#registerNewBtn(type="button") New Participant Registration
                 //article.registerStep.row
                 //    div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2
                 //        h2 <span class="punctuation">2.</span> Submit Liability Release Form
                 //        p Please download and email a liability release for each participant you registered to <a href="mailto:info@wildwoodranch.co">info@wildwoodranch.co</a> at your earliest convenience. We need a new release each year.
                 //        button#downloadRelease(type="button") Download
-                article.registerStep.row
-                    div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2
-                        h2 <span class="punctuation">2.</span> Pay
-                        p We will be sending an invoice to registered participants. Expect to see an email from Stripe in your inbox within 48 hours of registering.
-                        //p Please select the payment option for the number of participants you registered. Each session is $60 per participant. If you registered participants for multiple sessions, please multiply the number of sessions by the number of participants. For instance, select 4 if you registered 2 participants for 2 sessions each.
-                        //p
-                        //    select#numParticipants
-                        //        option(value=1 name="1") 1
-                        //        option(value=2 name="2") 2
-                        //        option(value=3 name="3") 3
-                        //        option(value=4 name="4") 4
-                        //        option(value=5 name="5") 5
-                        //        option(value=6 name="6") 6
-                        //        option(value=7 name="7") 7
-                        //        option(value=8 name="8") 8
-                        //        option(value=9 name="9") 9
-                        //        option(value=10 name="10") 10
-                        //    span#participantLabel Participant
-                        //    button#checkout.checkout Pay
-                        //p If we do not receive payment in full within 3 days of your registration submittal, you will be notified of your registration cancellation.
-                        p#error-message
+                //- article.registerStep.row
+                //-     div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2
+                //-         h2 <span class="punctuation">2.</span> Pay
+                //-         p We will be sending an invoice to registered participants. Expect to see an email from Stripe in your inbox within 48 hours of registering.
+                //-         //p Please select the payment option for the number of participants you registered. Each session is $60 per participant. If you registered participants for multiple sessions, please multiply the number of sessions by the number of participants. For instance, select 4 if you registered 2 participants for 2 sessions each.
+                //-         //p
+                //-         //    select#numParticipants
+                //-         //        option(value=1 name="1") 1
+                //-         //        option(value=2 name="2") 2
+                //-         //        option(value=3 name="3") 3
+                //-         //        option(value=4 name="4") 4
+                //-         //        option(value=5 name="5") 5
+                //-         //        option(value=6 name="6") 6
+                //-         //        option(value=7 name="7") 7
+                //-         //        option(value=8 name="8") 8
+                //-         //        option(value=9 name="9") 9
+                //-         //        option(value=10 name="10") 10
+                //-         //    span#participantLabel Participant
+                //-         //    button#checkout.checkout Pay
+                //-         //p If we do not receive payment in full within 3 days of your registration submittal, you will be notified of your registration cancellation.
+                //-         p#error-message
                 div.row
                     div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2
                         h1 Cancellation Policy
