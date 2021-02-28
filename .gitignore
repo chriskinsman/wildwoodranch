@@ -1,3 +1,5 @@
 .idea
 wildwoodranch.iml
 node_modules
+docs/*.html
+.vscode
