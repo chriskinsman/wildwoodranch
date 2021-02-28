@@ -41,6 +41,7 @@ i:hover {
 }
 
 button {
+    cursor: pointer;
     border-radius: 0;
     background-color: darkkhaki;
     color: white;
@@ -48,6 +49,10 @@ button {
     border: none;
     font-size: 14px;
     min-width: 100px;
+}
+
+button:not(:last-child) {
+    margin-right: 10px;
 }
 
 address {
@@ -152,15 +157,22 @@ nav .punctuation {
 }
 
 body {
-    background-image: url("../assets/wildflower-field-faded-min.jpg");
+    background: url("../assets/wildflower-field-faded-min.jpg") center center fixed;;
     /*margin-bottom: 30px;*/
-    background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-#home, #register, #faq, #contact, #about, #success, #error, #jobs, #covid, #tc {
+#home, #register, #faq, #contact, #about, #success, #error, #jobs, #covid, #tc, #jobdescription {
     background-color: rgba(255,255,255,.7);
     padding: 20px 0 50px 0;
     margin-bottom: 50px;
+}
+
+#jobdescription {
+    text-align: left;
 }
 
 /* FOOTER */
@@ -249,10 +261,6 @@ footer .social a{
     margin-left: 25px;
 }
 
-button {
-    cursor: pointer;
-}
-
 #register ul, #jobs ul {
     margin: auto;
     padding-left: 0;
@@ -292,11 +300,11 @@ button {
     margin: 10px;
 }
 
-#jobs ul {
+#jobs ul, #jobdescription ul {
     margin-bottom: 20px;
 }
 
-#jobs li {
+#jobs li, #jobdescription li {
     margin-bottom: 10px;
 }
 
