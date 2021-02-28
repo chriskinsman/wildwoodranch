@@ -12,7 +12,6 @@ html(lang="en")
         link(href="https://fonts.googleapis.com/css?family=Gaegu|Meddon|Open+Sans" rel="stylesheet")
         link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous")
         link(rel="stylesheet" href="css/main.css" type="text/css")
-        script(src="https://js.stripe.com/v3")
 
 
         <!-- Create a button that your customers click to complete their purchase. -->
@@ -50,12 +49,15 @@ html(lang="en")
                             The minimum age for employment is 15 years.
                         p Our positions include:
                         ul
-                            li Counselor
-                            li Horse Wrangler
-                            li Station Leader
-                            li Support Staff
-                        p If you think you'd be a good fit for any of our positions, apply for our next spring or summer season!
-                        button#newEmployeeApplyBtn(type="button") New Staff Application
-                        button#oldEmployeeApplyBtn(type="button") Previous Staff Application
+                            li 
+                              a(href='campcounselor.html') Camp Counselor
+                            li 
+                              a(href='horsewrangler.html') Horse Wrangler
+                            li 
+                              a(href='leadhorsewrangler.html') Lead Horse Wrangler
+                            li Activity Leader
+                        p If you think you'd be a good fit for any of our positions, apply for the 2021 season! The application will be available beginning on March 3, 2021.
+                        //- button(type="button", onclick="window.open('https://www.ultracamp.com', '_blank')") New Staff Application
+                        //- button(type="button", onclick="window.open('https://www.ultracamp.com', '_blank')") Returning Staff Application
 
         include footer
