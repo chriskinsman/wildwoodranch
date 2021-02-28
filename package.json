@@ -9,7 +9,7 @@
     "type": "git",
     "url": "https://github.com/wildwoodranch/website"
   },
-  "author": "Kate Kinsman",
+  "author": "Chris Kinsman",
   "license": "MIT",
   "devDependencies": {
     "pug-cli": "^1.0.0-alpha6"
